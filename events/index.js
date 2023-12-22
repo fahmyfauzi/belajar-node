@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // Node js global object
 // run REPL: Object.getOwnPropertyNames(global)
 
@@ -9,11 +10,13 @@ const myEventEmitter = new EventEmitter();
 // fungsi yang akan dijalankan ketika event coffee-order terjadi
 const makeCoffee = ({ name }) => {
   const date = moment().format('MMM Do YY');
+  // eslint-disable-next-line no-console
   console.log(`Kopi ${name} telah dibuat pada tanggal ${date}`);
 };
 
 const makeBill = ({ price }) => {
   const date = moment().format('MMM Do YY');
+  // eslint-disable-next-line no-console
   console.log(`Bill pada tanggal ${date} sebesar ${price}`);
 };
 
